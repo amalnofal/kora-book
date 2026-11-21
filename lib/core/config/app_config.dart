@@ -1,6 +1,8 @@
 class AppConfig {
   AppConfig._();
 
+  static const appName = 'Kora Book';
+
   static const supabaseUrl = String.fromEnvironment('SUPABASE_URL');
   static const supabasePublishableKey = String.fromEnvironment(
     'SUPABASE_PUBLISHABLE_KEY',

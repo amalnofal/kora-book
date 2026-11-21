@@ -1,0 +1,11 @@
+{
+    "@@locale": "en",
+    "language": "Language",
+    "@language": {
+        "description": "Label for the language setting"
+    },
+    "theme": "Theme",
+    "@theme": {
+        "description": "Label for the theme (light/dark) setting"
+    }
+}

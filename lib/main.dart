@@ -14,6 +14,6 @@ Future<void> main() async {
     publishableKey: AppConfig.supabasePublishableKey,
   );
 
-  setupServiceLocator();
+  await setupServiceLocator();
   runApp(const KoraBookApp());
 }
