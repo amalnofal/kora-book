@@ -3,6 +3,7 @@ import 'package:kora_book/core/router/app_router.dart';
 import 'package:kora_book/core/session/cubit/session_cubit.dart';
 import 'package:kora_book/core/session/session_repository.dart';
 import 'package:kora_book/core/settings/cubit/settings_cubit.dart';
+import 'package:kora_book/features/auth/data/auth_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -21,5 +22,10 @@ Future<void> setupServiceLocator() async {
   getIt.registerSingleton<SessionCubit>(
     SessionCubit(getIt<SessionRepository>()),
   );
+
   getIt.registerSingleton<AppRouter>(AppRouter(getIt<SessionCubit>()));
+
+  getIt.registerLazySingleton<AuthRepository>(
+    () => AuthRepository(getIt<SupabaseClient>()),
+  );
 }
