@@ -27,7 +27,7 @@ class AppLogo extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Image.asset(
-          'assets/images/logo_mark.png',
+          'assets/icons/app_icon.png',
           width: box,
           height: box,
           filterQuality: FilterQuality.medium,
