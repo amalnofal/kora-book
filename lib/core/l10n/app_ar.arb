@@ -1,5 +1,27 @@
 {
   "@@locale": "ar",
   "language": "اللغة",
-  "theme": "المظهر"
+  "theme": "المظهر",
+  "authTagline": "مباراتك القادمة تبدأ من هنا.",
+  "loginTitle": "مرحبًا بعودتك",
+  "loginSubtitle": "سجّل الدخول لمتابعة الحجز",
+  "emailLabel": "البريد الإلكتروني",
+  "emailHint": "name@example.com",
+  "passwordLabel": "كلمة المرور",
+  "forgotPasswordLink": "نسيت كلمة المرور؟",
+  "signInButton": "تسجيل الدخول",
+  "newToApp": "جديد في {appName}؟",
+  "createAccountLink": "إنشاء حساب",
+  "validationEmailRequired": "أدخل بريدك الإلكتروني",
+  "validationEmailInvalid": "أدخل بريدًا إلكترونيًا صحيحًا",
+  "validationPasswordRequired": "أدخل كلمة المرور",
+  "authErrorInvalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+  "authErrorEmailNotConfirmed": "يرجى تأكيد بريدك الإلكتروني أولًا.",
+  "authErrorEmailTaken": "يوجد حساب مسجّل بهذا البريد الإلكتروني بالفعل.",
+  "authErrorInvalidOtp": "الرمز غير صحيح أو انتهت صلاحيته.",
+  "authErrorRateLimited": "محاولات كثيرة. انتظر قليلًا ثم حاول مرة أخرى.",
+  "authErrorWeakPassword": "كلمة المرور ضعيفة. استخدم 8 أحرف على الأقل تشمل حرفًا إنجليزيًا كبيرًا وصغيرًا ورقمًا ورمزًا.",
+  "authErrorSamePassword": "يجب أن تختلف كلمة المرور الجديدة عن الحالية.",
+  "authErrorNetwork": "لا يوجد اتصال. تحقق من الإنترنت وحاول مرة أخرى.",
+  "authErrorUnknown": "حدث خطأ ما. حاول مرة أخرى."
 }

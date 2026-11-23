@@ -109,6 +109,138 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Theme'**
   String get theme;
+
+  /// Tagline shown under the logo on the sign-in screen
+  ///
+  /// In en, this message translates to:
+  /// **'Your next match starts here.'**
+  String get authTagline;
+
+  /// Heading of the sign-in screen
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome back'**
+  String get loginTitle;
+
+  /// Subheading of the sign-in screen
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to continue booking'**
+  String get loginSubtitle;
+
+  /// Label of the email field
+  ///
+  /// In en, this message translates to:
+  /// **'Email address'**
+  String get emailLabel;
+
+  /// Placeholder of the email field
+  ///
+  /// In en, this message translates to:
+  /// **'name@example.com'**
+  String get emailHint;
+
+  /// Label of the password field
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get passwordLabel;
+
+  /// Link on the sign-in screen that starts password recovery
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot password?'**
+  String get forgotPasswordLink;
+
+  /// Primary button on the sign-in screen
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get signInButton;
+
+  /// Text before the create-account link on the sign-in screen
+  ///
+  /// In en, this message translates to:
+  /// **'New to {appName}?'**
+  String newToApp(String appName);
+
+  /// Link that starts the sign-up flow
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get createAccountLink;
+
+  /// Validation error when the email field is empty
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email'**
+  String get validationEmailRequired;
+
+  /// Validation error when the email format is wrong
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email address'**
+  String get validationEmailInvalid;
+
+  /// Validation error when the password field is empty
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your password'**
+  String get validationPasswordRequired;
+
+  /// Auth error: wrong email or password
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect email or password.'**
+  String get authErrorInvalidCredentials;
+
+  /// Auth error: account exists but the email is not verified
+  ///
+  /// In en, this message translates to:
+  /// **'Please verify your email first.'**
+  String get authErrorEmailNotConfirmed;
+
+  /// Auth error: sign-up with an email that is already registered
+  ///
+  /// In en, this message translates to:
+  /// **'An account with this email already exists.'**
+  String get authErrorEmailTaken;
+
+  /// Auth error: wrong or expired verification code
+  ///
+  /// In en, this message translates to:
+  /// **'The code is incorrect or has expired.'**
+  String get authErrorInvalidOtp;
+
+  /// Auth error: rate limit reached
+  ///
+  /// In en, this message translates to:
+  /// **'Too many attempts. Please wait a moment and try again.'**
+  String get authErrorRateLimited;
+
+  /// Auth error: the server rejected the password as weak
+  ///
+  /// In en, this message translates to:
+  /// **'This password is too weak. Use at least 8 characters with uppercase, lowercase, a number and a symbol.'**
+  String get authErrorWeakPassword;
+
+  /// Auth error: new password equals the old one
+  ///
+  /// In en, this message translates to:
+  /// **'The new password must be different from the current one.'**
+  String get authErrorSamePassword;
+
+  /// Auth error: network failure
+  ///
+  /// In en, this message translates to:
+  /// **'No connection. Check your internet and try again.'**
+  String get authErrorNetwork;
+
+  /// Auth error: any unexpected failure
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong. Please try again.'**
+  String get authErrorUnknown;
 }
 
 class _AppLocalizationsDelegate

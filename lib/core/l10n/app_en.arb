@@ -7,5 +7,98 @@
     "theme": "Theme",
     "@theme": {
         "description": "Label for the theme (light/dark) setting"
+    },
+    "authTagline": "Your next match starts here.",
+    "@authTagline": {
+        "description": "Tagline shown under the logo on the sign-in screen"
+    },
+    "loginTitle": "Welcome back",
+    "@loginTitle": {
+        "description": "Heading of the sign-in screen"
+    },
+    "loginSubtitle": "Sign in to continue booking",
+    "@loginSubtitle": {
+        "description": "Subheading of the sign-in screen"
+    },
+    "emailLabel": "Email address",
+    "@emailLabel": {
+        "description": "Label of the email field"
+    },
+    "emailHint": "name@example.com",
+    "@emailHint": {
+        "description": "Placeholder of the email field"
+    },
+    "passwordLabel": "Password",
+    "@passwordLabel": {
+        "description": "Label of the password field"
+    },
+    "forgotPasswordLink": "Forgot password?",
+    "@forgotPasswordLink": {
+        "description": "Link on the sign-in screen that starts password recovery"
+    },
+    "signInButton": "Sign in",
+    "@signInButton": {
+        "description": "Primary button on the sign-in screen"
+    },
+    "newToApp": "New to {appName}?",
+    "@newToApp": {
+        "description": "Text before the create-account link on the sign-in screen",
+        "placeholders": {
+            "appName": {
+                "type": "String"
+            }
+        }
+    },
+    "createAccountLink": "Create account",
+    "@createAccountLink": {
+        "description": "Link that starts the sign-up flow"
+    },
+    "validationEmailRequired": "Enter your email",
+    "@validationEmailRequired": {
+        "description": "Validation error when the email field is empty"
+    },
+    "validationEmailInvalid": "Enter a valid email address",
+    "@validationEmailInvalid": {
+        "description": "Validation error when the email format is wrong"
+    },
+    "validationPasswordRequired": "Enter your password",
+    "@validationPasswordRequired": {
+        "description": "Validation error when the password field is empty"
+    },
+    "authErrorInvalidCredentials": "Incorrect email or password.",
+    "@authErrorInvalidCredentials": {
+        "description": "Auth error: wrong email or password"
+    },
+    "authErrorEmailNotConfirmed": "Please verify your email first.",
+    "@authErrorEmailNotConfirmed": {
+        "description": "Auth error: account exists but the email is not verified"
+    },
+    "authErrorEmailTaken": "An account with this email already exists.",
+    "@authErrorEmailTaken": {
+        "description": "Auth error: sign-up with an email that is already registered"
+    },
+    "authErrorInvalidOtp": "The code is incorrect or has expired.",
+    "@authErrorInvalidOtp": {
+        "description": "Auth error: wrong or expired verification code"
+    },
+    "authErrorRateLimited": "Too many attempts. Please wait a moment and try again.",
+    "@authErrorRateLimited": {
+        "description": "Auth error: rate limit reached"
+    },
+    "authErrorWeakPassword": "This password is too weak. Use at least 8 characters with uppercase, lowercase, a number and a symbol.",
+    "@authErrorWeakPassword": {
+        "description": "Auth error: the server rejected the password as weak"
+    },
+    "authErrorSamePassword": "The new password must be different from the current one.",
+    "@authErrorSamePassword": {
+        "description": "Auth error: new password equals the old one"
+    },
+    "authErrorNetwork": "No connection. Check your internet and try again.",
+    "@authErrorNetwork": {
+        "description": "Auth error: network failure"
+    },
+    "authErrorUnknown": "Something went wrong. Please try again.",
+    "@authErrorUnknown": {
+        "description": "Auth error: any unexpected failure"
     }
 }

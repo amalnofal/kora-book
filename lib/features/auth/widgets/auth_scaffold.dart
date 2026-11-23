@@ -14,12 +14,14 @@ class AuthScaffold extends StatelessWidget {
     this.title,
     this.subtitle,
     this.onBack,
+    this.tagline,
   });
 
   final Widget child;
   final String? title;
   final String? subtitle;
   final VoidCallback? onBack;
+  final String? tagline;
 
   @override
   Widget build(BuildContext context) {
@@ -73,6 +75,16 @@ class AuthScaffold extends StatelessWidget {
                       else
                         const SizedBox(height: AppSpacing.xl),
                       const Center(child: AppLogo()),
+                      if (tagline != null) ...[
+                        const SizedBox(height: AppSpacing.sm),
+                        Text(
+                          tagline!,
+                          textAlign: TextAlign.center,
+                          style: text.bodyMedium?.copyWith(
+                            color: colors.textMuted,
+                          ),
+                        ),
+                      ],
                       const SizedBox(height: AppSpacing.xxl),
                       Container(
                         padding: const EdgeInsets.all(AppSpacing.xl),
