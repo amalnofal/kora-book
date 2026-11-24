@@ -8,6 +8,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.primarySoft,
     required this.primaryContainer,
     required this.primaryBorder,
+    required this.primaryText,
     required this.onPrimary,
     required this.background,
     required this.surface,
@@ -29,6 +30,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color primarySoft;
   final Color primaryContainer;
   final Color primaryBorder;
+  final Color primaryText;
   final Color onPrimary;
   final Color background;
   final Color surface;
@@ -50,6 +52,7 @@ class AppColors extends ThemeExtension<AppColors> {
     primarySoft: Color(0xFFF0FDF4),
     primaryContainer: Color(0xFFDCFCE7),
     primaryBorder: Color(0xFFBBF7D0),
+    primaryText: Color(0xFF15803D),
     onPrimary: Color(0xFFFFFFFF),
     background: Color(0xFFF8FAFC),
     surface: Color(0xFFFFFFFF),
@@ -72,6 +75,7 @@ class AppColors extends ThemeExtension<AppColors> {
     primarySoft: Color(0xFF0F2A1C),
     primaryContainer: Color(0xFF14532D),
     primaryBorder: Color(0xFF166534),
+    primaryText: Color(0xFF4ADE80),
     onPrimary: Color(0xFFFFFFFF),
     background: Color(0xFF0B1210),
     surface: Color(0xFF151F1B),
@@ -95,6 +99,7 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? primarySoft,
     Color? primaryContainer,
     Color? primaryBorder,
+    Color? primaryText,
     Color? onPrimary,
     Color? background,
     Color? surface,
@@ -116,6 +121,7 @@ class AppColors extends ThemeExtension<AppColors> {
       primarySoft: primarySoft ?? this.primarySoft,
       primaryContainer: primaryContainer ?? this.primaryContainer,
       primaryBorder: primaryBorder ?? this.primaryBorder,
+      primaryText: primaryText ?? this.primaryText,
       onPrimary: onPrimary ?? this.onPrimary,
       background: background ?? this.background,
       surface: surface ?? this.surface,
@@ -143,6 +149,7 @@ class AppColors extends ThemeExtension<AppColors> {
       primarySoft: l(primarySoft, other.primarySoft),
       primaryContainer: l(primaryContainer, other.primaryContainer),
       primaryBorder: l(primaryBorder, other.primaryBorder),
+      primaryText: l(primaryText, other.primaryText),
       onPrimary: l(onPrimary, other.onPrimary),
       background: l(background, other.background),
       surface: l(surface, other.surface),

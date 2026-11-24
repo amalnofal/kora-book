@@ -37,7 +37,7 @@ class AppTheme {
         .apply(bodyColor: c.textPrimary, displayColor: c.textPrimary);
 
     final buttonShape = RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(AppRadius.lg),
+      borderRadius: BorderRadius.circular(AppRadius.md),
     );
     const buttonSize = Size(64, AppSizes.buttonHeight);
 
@@ -81,7 +81,7 @@ class AppTheme {
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           minimumSize: const Size(64, AppSizes.minTapTarget),
-          foregroundColor: c.primary,
+          foregroundColor: c.primaryText,
           textStyle: textTheme.labelLarge,
         ),
       ),
@@ -95,7 +95,7 @@ class AppTheme {
         hintStyle: textTheme.bodyLarge?.copyWith(color: c.textMuted),
         border: border(c.line),
         enabledBorder: border(c.line),
-        focusedBorder: border(c.primary, 2),
+        focusedBorder: border(c.primary),
         errorBorder: border(c.danger),
         focusedErrorBorder: border(c.danger, 2),
       ),

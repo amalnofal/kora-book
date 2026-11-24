@@ -4,123 +4,132 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimens.dart';
 import '../../../core/widgets/app_logo.dart';
 
-/// Shared layout for every auth screen: soft green glow background,
-/// logo, and a white card holding the screen content.
-/// Pass [onBack] to show a back button (register, OTP, ...).
+/// Shared layout for every auth screen: a soft green circle in the
+/// background, the logo + [tagline] on top, and a white bottom sheet
+/// holding the screen content.
 class AuthScaffold extends StatelessWidget {
   const AuthScaffold({
     super.key,
     required this.child,
     this.title,
     this.subtitle,
-    this.onBack,
     this.tagline,
   });
 
   final Widget child;
   final String? title;
   final String? subtitle;
-  final VoidCallback? onBack;
   final String? tagline;
 
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
-    final theme = Theme.of(context);
-    final text = theme.textTheme;
+    final text = Theme.of(context).textTheme;
+    final bottomInset = MediaQuery.paddingOf(context).bottom;
 
     return Scaffold(
       body: Stack(
         children: [
           PositionedDirectional(
-            top: -140,
-            start: 0,
-            end: 0,
+            top: -180,
+            end: -130,
             child: IgnorePointer(
               child: Container(
-                height: 380,
+                width: 340,
+                height: 340,
                 decoration: BoxDecoration(
-                  gradient: RadialGradient(
-                    center: Alignment.topCenter,
-                    radius: 0.9,
-                    colors: [
-                      colors.primary.withValues(alpha: 0.16),
-                      colors.primary.withValues(alpha: 0),
-                    ],
-                  ),
+                  shape: BoxShape.circle,
+                  color: colors.primaryContainer,
                 ),
               ),
             ),
           ),
           SafeArea(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSpacing.xl,
-                vertical: AppSpacing.lg,
-              ),
-              child: Center(
+            bottom: false,
+            child: LayoutBuilder(
+              builder: (context, constraints) => SingleChildScrollView(
                 child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 480),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      if (onBack != null)
-                        Align(
-                          alignment: AlignmentDirectional.centerStart,
-                          child: IconButton(
-                            onPressed: onBack,
-                            icon: const Icon(Icons.arrow_back),
-                          ),
-                        )
-                      else
-                        const SizedBox(height: AppSpacing.xl),
-                      const Center(child: AppLogo()),
-                      if (tagline != null) ...[
-                        const SizedBox(height: AppSpacing.sm),
-                        Text(
-                          tagline!,
-                          textAlign: TextAlign.center,
-                          style: text.bodyMedium?.copyWith(
-                            color: colors.textMuted,
-                          ),
-                        ),
-                      ],
-                      const SizedBox(height: AppSpacing.xxl),
-                      Container(
-                        padding: const EdgeInsets.all(AppSpacing.xl),
-                        decoration: BoxDecoration(
-                          color: theme.colorScheme.surface,
-                          borderRadius: BorderRadius.circular(AppRadius.xl),
-                          border: Border.all(
-                            color: theme.colorScheme.outlineVariant,
-                          ),
-                        ),
+                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                  child: IntrinsicHeight(
+                    child: Center(
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 480),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            if (title != null)
-                              Text(
-                                title!,
-                                style: text.headlineSmall?.copyWith(
-                                  fontWeight: FontWeight.w700,
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                AppSpacing.xl,
+                                64,
+                                AppSpacing.xl,
+                                12,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const AppLogo(),
+                                  if (tagline != null) ...[
+                                    const SizedBox(height: AppSpacing.md),
+                                    Text(
+                                      tagline!,
+                                      style: text.bodyMedium?.copyWith(
+                                        color: colors.textMuted,
+                                      ),
+                                    ),
+                                  ],
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                  AppSpacing.xl,
+                                  AppSpacing.xl,
+                                  AppSpacing.xl,
+                                  AppSpacing.xxl + bottomInset,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: colors.surface,
+                                  borderRadius: const BorderRadius.vertical(
+                                    top: Radius.circular(AppRadius.pill),
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: colors.textPrimary.withValues(
+                                        alpha: 0.06,
+                                      ),
+                                      blurRadius: 30,
+                                      offset: const Offset(0, -6),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    if (title != null)
+                                      Text(title!, style: text.headlineSmall),
+                                    if (subtitle != null) ...[
+                                      const SizedBox(height: AppSpacing.sm),
+                                      Text(
+                                        subtitle!,
+                                        style: text.bodyMedium?.copyWith(
+                                          color: colors.textMuted,
+                                        ),
+                                      ),
+                                    ],
+                                    if (title != null || subtitle != null)
+                                      const SizedBox(height: AppSpacing.xl),
+                                    child,
+                                  ],
                                 ),
                               ),
-                            if (subtitle != null) ...[
-                              const SizedBox(height: AppSpacing.sm),
-                              Text(
-                                subtitle!,
-                                style: text.bodyMedium?.copyWith(
-                                  color: colors.textMuted,
-                                ),
-                              ),
-                            ],
-                            if (title != null || subtitle != null)
-                              const SizedBox(height: AppSpacing.xl),
-                            child,
+                            ),
                           ],
                         ),
                       ),
-                    ],
+                    ),
                   ),
                 ),
               ),

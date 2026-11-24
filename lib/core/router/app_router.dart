@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:kora_book/features/auth/screens/login_screen.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../session/cubit/session_cubit.dart';
@@ -18,10 +19,7 @@ class AppRouter {
           path: Routes.splash,
           builder: (_, _) => const PlaceholderScreen('Loading'),
         ),
-        GoRoute(
-          path: Routes.auth,
-          builder: (_, _) => const PlaceholderScreen('Auth'),
-        ),
+        GoRoute(path: Routes.auth, builder: (_, _) => const LoginScreen()),
         GoRoute(
           path: Routes.customerHome,
           builder: (_, _) => const PlaceholderScreen('Customer app'),
