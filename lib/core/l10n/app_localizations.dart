@@ -241,6 +241,216 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Something went wrong. Please try again.'**
   String get authErrorUnknown;
+
+  /// Tagline on the account type screen
+  ///
+  /// In en, this message translates to:
+  /// **'One app, built for players and football venues.'**
+  String get accountTypeTagline;
+
+  /// Heading of the account type screen
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your account'**
+  String get accountTypeTitle;
+
+  /// Subheading of the account type screen
+  ///
+  /// In en, this message translates to:
+  /// **'This can’t be changed later. Pick the option that matches how you’ll use {appName}.'**
+  String accountTypeSubtitle(String appName);
+
+  /// Back link on the account type screen
+  ///
+  /// In en, this message translates to:
+  /// **'Back to sign in'**
+  String get accountTypeBackToSignIn;
+
+  /// Title of the customer account option
+  ///
+  /// In en, this message translates to:
+  /// **'Book football pitches'**
+  String get accountTypeCustomerTitle;
+
+  /// Description of the customer account option
+  ///
+  /// In en, this message translates to:
+  /// **'Discover venues, reserve slots and manage your bookings.'**
+  String get accountTypeCustomerDescription;
+
+  /// Small badge on the customer account option
+  ///
+  /// In en, this message translates to:
+  /// **'Customer account'**
+  String get accountTypeCustomerBadge;
+
+  /// Title of the venue account option
+  ///
+  /// In en, this message translates to:
+  /// **'Register a football venue'**
+  String get accountTypeVenueTitle;
+
+  /// Description of the venue account option
+  ///
+  /// In en, this message translates to:
+  /// **'Set up your venue, pitches, prices and bookings.'**
+  String get accountTypeVenueDescription;
+
+  /// Small badge on the venue account option
+  ///
+  /// In en, this message translates to:
+  /// **'Venue account'**
+  String get accountTypeVenueBadge;
+
+  /// Generic continue button
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueButton;
+
+  /// Tagline on the customer sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'Create your account and get on the pitch.'**
+  String get registerCustomerTagline;
+
+  /// Tagline on the venue sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'Bring your venue to {appName}.'**
+  String registerVenueTagline(String appName);
+
+  /// Heading of the customer sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'Create customer account'**
+  String get registerCustomerTitle;
+
+  /// Heading of the venue sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'Create venue account'**
+  String get registerVenueTitle;
+
+  /// Subheading of the customer sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'A few personal details to get you started'**
+  String get registerCustomerSubtitle;
+
+  /// Subheading of the venue sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'Start with your venue’s basic login details'**
+  String get registerVenueSubtitle;
+
+  /// Back link on the sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'Change account type'**
+  String get registerChangeAccountType;
+
+  /// Step counter shown on the venue sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'Step {current} of {total}'**
+  String registerStepIndicator(int current, int total);
+
+  /// Name of the first venue sign-up step
+  ///
+  /// In en, this message translates to:
+  /// **'Basic details'**
+  String get registerStepBasicDetails;
+
+  /// Label of the customer name field
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get fullNameLabel;
+
+  /// Placeholder of the customer name field
+  ///
+  /// In en, this message translates to:
+  /// **'Your full name'**
+  String get fullNameHint;
+
+  /// Label of the venue name field
+  ///
+  /// In en, this message translates to:
+  /// **'Venue name'**
+  String get venueNameLabel;
+
+  /// Placeholder of the venue name field
+  ///
+  /// In en, this message translates to:
+  /// **'Your venue’s name'**
+  String get venueNameHint;
+
+  /// Label of the phone field
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number'**
+  String get phoneLabel;
+
+  /// Placeholder of the phone field (Egyptian mobile format)
+  ///
+  /// In en, this message translates to:
+  /// **'+20 1XX XXX XXXX'**
+  String get phoneHint;
+
+  /// Helper text under the new-password field
+  ///
+  /// In en, this message translates to:
+  /// **'At least 8 characters, with uppercase, lowercase, a number and a symbol.'**
+  String get passwordRulesHint;
+
+  /// Checkbox the venue must tick before creating the account
+  ///
+  /// In en, this message translates to:
+  /// **'I’m authorized to manage this venue on {appName}.'**
+  String venueAuthorizationCheck(String appName);
+
+  /// Primary button on the sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get createAccountButton;
+
+  /// Text before the sign-in link on the sign-up screen
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get alreadyHaveAccount;
+
+  /// Validation error: customer name is empty
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your full name'**
+  String get validationFullNameRequired;
+
+  /// Validation error: venue name is empty
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the venue name'**
+  String get validationVenueNameRequired;
+
+  /// Validation error: phone is empty
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your phone number'**
+  String get validationPhoneRequired;
+
+  /// Validation error: phone is not a valid Egyptian mobile
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid Egyptian mobile number'**
+  String get validationPhoneInvalid;
+
+  /// Validation error: new password does not meet the rules
+  ///
+  /// In en, this message translates to:
+  /// **'Use at least 8 characters with uppercase, lowercase, a number and a symbol.'**
+  String get validationPasswordWeak;
 }
 
 class _AppLocalizationsDelegate

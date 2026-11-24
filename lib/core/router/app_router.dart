@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:kora_book/features/auth/screens/account_type_screen.dart';
 import 'package:kora_book/features/auth/screens/login_screen.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -20,6 +21,17 @@ class AppRouter {
           builder: (_, _) => const PlaceholderScreen('Loading'),
         ),
         GoRoute(path: Routes.auth, builder: (_, _) => const LoginScreen()),
+        GoRoute(
+          path: Routes.accountType,
+          builder: (_, _) => const AccountTypeScreen(),
+        ),
+        GoRoute(
+          path: Routes.register,
+          // Temporary until the register screen is built.
+          builder: (_, state) => PlaceholderScreen(
+            'Register ${state.uri.queryParameters['role']}',
+          ),
+        ),
         GoRoute(
           path: Routes.customerHome,
           builder: (_, _) => const PlaceholderScreen('Customer app'),
@@ -62,7 +74,7 @@ class AppRouter {
       SessionSignedIn(:final info) when info.setupCompleted =>
         loc.startsWith(Routes.venueHome) && loc != Routes.venueSetup,
       SessionSignedIn() => loc == Routes.venueSetup,
-      SessionSignedOut() || SessionError() => loc == Routes.auth,
+      SessionSignedOut() || SessionError() => loc.startsWith(Routes.auth),
       SessionLoading() => loc == Routes.splash,
     };
 

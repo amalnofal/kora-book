@@ -15,6 +15,9 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.textPrimary,
     required this.textMuted,
     required this.line,
+    required this.authBackground,
+    required this.textSubtle,
+    required this.lineStrong,
     required this.warning,
     required this.warningSoft,
     required this.warningBorder,
@@ -37,6 +40,9 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color textPrimary;
   final Color textMuted;
   final Color line;
+  final Color authBackground;
+  final Color textSubtle;
+  final Color lineStrong;
   final Color warning;
   final Color warningSoft;
   final Color warningBorder;
@@ -59,6 +65,9 @@ class AppColors extends ThemeExtension<AppColors> {
     textPrimary: Color(0xFF0F172A),
     textMuted: Color(0xFF64748B),
     line: Color(0xFFE2E8F0),
+    authBackground: Color(0xFFF4F8F5),
+    textSubtle: Color(0xFF94A3B8),
+    lineStrong: Color(0xFFCBD5E1),
     warning: Color(0xFFF59E0B),
     warningSoft: Color(0xFFFFFBEB),
     warningBorder: Color(0xFFFDE68A),
@@ -82,6 +91,9 @@ class AppColors extends ThemeExtension<AppColors> {
     textPrimary: Color(0xFFF1F5F9),
     textMuted: Color(0xFF94A3B8),
     line: Color(0xFF2A3832),
+    authBackground: Color(0xFF0B1210),
+    textSubtle: Color(0xFF64748B),
+    lineStrong: Color(0xFF3B4A43),
     warning: Color(0xFFF59E0B),
     warningSoft: Color(0xFF2A2008),
     warningBorder: Color(0xFF78350F),
@@ -106,6 +118,9 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? textPrimary,
     Color? textMuted,
     Color? line,
+    Color? authBackground,
+    Color? textSubtle,
+    Color? lineStrong,
     Color? warning,
     Color? warningSoft,
     Color? warningBorder,
@@ -128,6 +143,9 @@ class AppColors extends ThemeExtension<AppColors> {
       textPrimary: textPrimary ?? this.textPrimary,
       textMuted: textMuted ?? this.textMuted,
       line: line ?? this.line,
+      authBackground: authBackground ?? this.authBackground,
+      textSubtle: textSubtle ?? this.textSubtle,
+      lineStrong: lineStrong ?? this.lineStrong,
       warning: warning ?? this.warning,
       warningSoft: warningSoft ?? this.warningSoft,
       warningBorder: warningBorder ?? this.warningBorder,
@@ -156,6 +174,9 @@ class AppColors extends ThemeExtension<AppColors> {
       textPrimary: l(textPrimary, other.textPrimary),
       textMuted: l(textMuted, other.textMuted),
       line: l(line, other.line),
+      authBackground: l(authBackground, other.authBackground),
+      textSubtle: l(textSubtle, other.textSubtle),
+      lineStrong: l(lineStrong, other.lineStrong),
       warning: l(warning, other.warning),
       warningSoft: l(warningSoft, other.warningSoft),
       warningBorder: l(warningBorder, other.warningBorder),

@@ -5,4 +5,6 @@ class Routes {
   static const customerHome = '/customer';
   static const venueSetup = '/venue/setup';
   static const venueHome = '/venue';
+  static const accountType = '/auth/account-type';
+  static const register = '/auth/register';
 }

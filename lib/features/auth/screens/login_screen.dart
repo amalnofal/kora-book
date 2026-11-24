@@ -1,5 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:kora_book/core/router/routes.dart';
 import 'package:kora_book/features/auth/cubit/login_cubit/login_cubit.dart';
+import 'package:kora_book/features/auth/widgets/auth_primary_button.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../../core/config/app_config.dart';
@@ -114,45 +117,18 @@ class _LoginViewState extends State<_LoginView> {
                 child: Text(l10n.forgotPasswordLink, style: linkTextStyle),
               ),
             ),
+
             if (state is LoginError) ...[
               AuthErrorBanner(message: state.failure.message(l10n)),
               const SizedBox(height: AppSpacing.lg),
             ],
-            DecoratedBox(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(AppRadius.lg),
-                boxShadow: loading
-                    ? null
-                    : [
-                        BoxShadow(
-                          color: colors.primary.withValues(alpha: 0.22),
-                          blurRadius: 18,
-                          offset: const Offset(0, 7),
-                        ),
-                      ],
-              ),
-              child: FilledButton(
-                onPressed: loading ? null : _submit,
-                child: loading
-                    ? SizedBox(
-                        height: 22,
-                        width: 22,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2.5,
-                          color: colors.onPrimary,
-                        ),
-                      )
-                    : Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(l10n.signInButton),
-                          const SizedBox(width: AppSpacing.sm),
-                          const Icon(Icons.chevron_right),
-                        ],
-                      ),
-              ),
+            AuthPrimaryButton(
+              label: l10n.signInButton,
+              loading: loading,
+              onPressed: _submit,
             ),
             const SizedBox(height: AppSpacing.xl),
+
             Wrap(
               alignment: WrapAlignment.center,
               crossAxisAlignment: WrapCrossAlignment.center,
@@ -163,8 +139,7 @@ class _LoginViewState extends State<_LoginView> {
                 ),
                 TextButton(
                   style: linkStyle,
-                  // Wired to the account-type screen in the next step.
-                  onPressed: () {},
+                  onPressed: () => context.push(Routes.accountType),
                   child: Text(l10n.createAccountLink, style: linkTextStyle),
                 ),
               ],

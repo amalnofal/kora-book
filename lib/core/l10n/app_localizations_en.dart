@@ -87,4 +87,125 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get authErrorUnknown => 'Something went wrong. Please try again.';
+
+  @override
+  String get accountTypeTagline =>
+      'One app, built for players and football venues.';
+
+  @override
+  String get accountTypeTitle => 'Choose your account';
+
+  @override
+  String accountTypeSubtitle(String appName) {
+    return 'This can’t be changed later. Pick the option that matches how you’ll use $appName.';
+  }
+
+  @override
+  String get accountTypeBackToSignIn => 'Back to sign in';
+
+  @override
+  String get accountTypeCustomerTitle => 'Book football pitches';
+
+  @override
+  String get accountTypeCustomerDescription =>
+      'Discover venues, reserve slots and manage your bookings.';
+
+  @override
+  String get accountTypeCustomerBadge => 'Customer account';
+
+  @override
+  String get accountTypeVenueTitle => 'Register a football venue';
+
+  @override
+  String get accountTypeVenueDescription =>
+      'Set up your venue, pitches, prices and bookings.';
+
+  @override
+  String get accountTypeVenueBadge => 'Venue account';
+
+  @override
+  String get continueButton => 'Continue';
+
+  @override
+  String get registerCustomerTagline =>
+      'Create your account and get on the pitch.';
+
+  @override
+  String registerVenueTagline(String appName) {
+    return 'Bring your venue to $appName.';
+  }
+
+  @override
+  String get registerCustomerTitle => 'Create customer account';
+
+  @override
+  String get registerVenueTitle => 'Create venue account';
+
+  @override
+  String get registerCustomerSubtitle =>
+      'A few personal details to get you started';
+
+  @override
+  String get registerVenueSubtitle =>
+      'Start with your venue’s basic login details';
+
+  @override
+  String get registerChangeAccountType => 'Change account type';
+
+  @override
+  String registerStepIndicator(int current, int total) {
+    return 'Step $current of $total';
+  }
+
+  @override
+  String get registerStepBasicDetails => 'Basic details';
+
+  @override
+  String get fullNameLabel => 'Full name';
+
+  @override
+  String get fullNameHint => 'Your full name';
+
+  @override
+  String get venueNameLabel => 'Venue name';
+
+  @override
+  String get venueNameHint => 'Your venue’s name';
+
+  @override
+  String get phoneLabel => 'Phone number';
+
+  @override
+  String get phoneHint => '+20 1XX XXX XXXX';
+
+  @override
+  String get passwordRulesHint =>
+      'At least 8 characters, with uppercase, lowercase, a number and a symbol.';
+
+  @override
+  String venueAuthorizationCheck(String appName) {
+    return 'I’m authorized to manage this venue on $appName.';
+  }
+
+  @override
+  String get createAccountButton => 'Create account';
+
+  @override
+  String get alreadyHaveAccount => 'Already have an account?';
+
+  @override
+  String get validationFullNameRequired => 'Enter your full name';
+
+  @override
+  String get validationVenueNameRequired => 'Enter the venue name';
+
+  @override
+  String get validationPhoneRequired => 'Enter your phone number';
+
+  @override
+  String get validationPhoneInvalid => 'Enter a valid Egyptian mobile number';
+
+  @override
+  String get validationPasswordWeak =>
+      'Use at least 8 characters with uppercase, lowercase, a number and a symbol.';
 }

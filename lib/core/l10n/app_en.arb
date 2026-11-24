@@ -100,5 +100,168 @@
     "authErrorUnknown": "Something went wrong. Please try again.",
     "@authErrorUnknown": {
         "description": "Auth error: any unexpected failure"
+    },
+    "accountTypeTagline": "One app, built for players and football venues.",
+    "@accountTypeTagline": {
+        "description": "Tagline on the account type screen"
+    },
+    "accountTypeTitle": "Choose your account",
+    "@accountTypeTitle": {
+        "description": "Heading of the account type screen"
+    },
+    "accountTypeSubtitle": "This can’t be changed later. Pick the option that matches how you’ll use {appName}.",
+    "@accountTypeSubtitle": {
+        "description": "Subheading of the account type screen",
+        "placeholders": {
+            "appName": {
+                "type": "String"
+            }
+        }
+    },
+    "accountTypeBackToSignIn": "Back to sign in",
+    "@accountTypeBackToSignIn": {
+        "description": "Back link on the account type screen"
+    },
+    "accountTypeCustomerTitle": "Book football pitches",
+    "@accountTypeCustomerTitle": {
+        "description": "Title of the customer account option"
+    },
+    "accountTypeCustomerDescription": "Discover venues, reserve slots and manage your bookings.",
+    "@accountTypeCustomerDescription": {
+        "description": "Description of the customer account option"
+    },
+    "accountTypeCustomerBadge": "Customer account",
+    "@accountTypeCustomerBadge": {
+        "description": "Small badge on the customer account option"
+    },
+    "accountTypeVenueTitle": "Register a football venue",
+    "@accountTypeVenueTitle": {
+        "description": "Title of the venue account option"
+    },
+    "accountTypeVenueDescription": "Set up your venue, pitches, prices and bookings.",
+    "@accountTypeVenueDescription": {
+        "description": "Description of the venue account option"
+    },
+    "accountTypeVenueBadge": "Venue account",
+    "@accountTypeVenueBadge": {
+        "description": "Small badge on the venue account option"
+    },
+    "continueButton": "Continue",
+    "@continueButton": {
+        "description": "Generic continue button"
+    },
+    "registerCustomerTagline": "Create your account and get on the pitch.",
+    "@registerCustomerTagline": {
+        "description": "Tagline on the customer sign-up screen"
+    },
+    "registerVenueTagline": "Bring your venue to {appName}.",
+    "@registerVenueTagline": {
+        "description": "Tagline on the venue sign-up screen",
+        "placeholders": {
+            "appName": {
+                "type": "String"
+            }
+        }
+    },
+    "registerCustomerTitle": "Create customer account",
+    "@registerCustomerTitle": {
+        "description": "Heading of the customer sign-up screen"
+    },
+    "registerVenueTitle": "Create venue account",
+    "@registerVenueTitle": {
+        "description": "Heading of the venue sign-up screen"
+    },
+    "registerCustomerSubtitle": "A few personal details to get you started",
+    "@registerCustomerSubtitle": {
+        "description": "Subheading of the customer sign-up screen"
+    },
+    "registerVenueSubtitle": "Start with your venue’s basic login details",
+    "@registerVenueSubtitle": {
+        "description": "Subheading of the venue sign-up screen"
+    },
+    "registerChangeAccountType": "Change account type",
+    "@registerChangeAccountType": {
+        "description": "Back link on the sign-up screen"
+    },
+    "registerStepIndicator": "Step {current} of {total}",
+    "@registerStepIndicator": {
+        "description": "Step counter shown on the venue sign-up screen",
+        "placeholders": {
+            "current": {
+                "type": "int"
+            },
+            "total": {
+                "type": "int"
+            }
+        }
+    },
+    "registerStepBasicDetails": "Basic details",
+    "@registerStepBasicDetails": {
+        "description": "Name of the first venue sign-up step"
+    },
+    "fullNameLabel": "Full name",
+    "@fullNameLabel": {
+        "description": "Label of the customer name field"
+    },
+    "fullNameHint": "Your full name",
+    "@fullNameHint": {
+        "description": "Placeholder of the customer name field"
+    },
+    "venueNameLabel": "Venue name",
+    "@venueNameLabel": {
+        "description": "Label of the venue name field"
+    },
+    "venueNameHint": "Your venue’s name",
+    "@venueNameHint": {
+        "description": "Placeholder of the venue name field"
+    },
+    "phoneLabel": "Phone number",
+    "@phoneLabel": {
+        "description": "Label of the phone field"
+    },
+    "phoneHint": "+20 1XX XXX XXXX",
+    "@phoneHint": {
+        "description": "Placeholder of the phone field (Egyptian mobile format)"
+    },
+    "passwordRulesHint": "At least 8 characters, with uppercase, lowercase, a number and a symbol.",
+    "@passwordRulesHint": {
+        "description": "Helper text under the new-password field"
+    },
+    "venueAuthorizationCheck": "I’m authorized to manage this venue on {appName}.",
+    "@venueAuthorizationCheck": {
+        "description": "Checkbox the venue must tick before creating the account",
+        "placeholders": {
+            "appName": {
+                "type": "String"
+            }
+        }
+    },
+    "createAccountButton": "Create account",
+    "@createAccountButton": {
+        "description": "Primary button on the sign-up screen"
+    },
+    "alreadyHaveAccount": "Already have an account?",
+    "@alreadyHaveAccount": {
+        "description": "Text before the sign-in link on the sign-up screen"
+    },
+    "validationFullNameRequired": "Enter your full name",
+    "@validationFullNameRequired": {
+        "description": "Validation error: customer name is empty"
+    },
+    "validationVenueNameRequired": "Enter the venue name",
+    "@validationVenueNameRequired": {
+        "description": "Validation error: venue name is empty"
+    },
+    "validationPhoneRequired": "Enter your phone number",
+    "@validationPhoneRequired": {
+        "description": "Validation error: phone is empty"
+    },
+    "validationPhoneInvalid": "Enter a valid Egyptian mobile number",
+    "@validationPhoneInvalid": {
+        "description": "Validation error: phone is not a valid Egyptian mobile"
+    },
+    "validationPasswordWeak": "Use at least 8 characters with uppercase, lowercase, a number and a symbol.",
+    "@validationPasswordWeak": {
+        "description": "Validation error: new password does not meet the rules"
     }
 }

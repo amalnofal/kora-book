@@ -14,12 +14,14 @@ class AuthScaffold extends StatelessWidget {
     this.title,
     this.subtitle,
     this.tagline,
+    this.leading,
   });
 
   final Widget child;
   final String? title;
   final String? subtitle;
   final String? tagline;
+  final Widget? leading;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +30,7 @@ class AuthScaffold extends StatelessWidget {
     final bottomInset = MediaQuery.paddingOf(context).bottom;
 
     return Scaffold(
+      backgroundColor: context.colors.authBackground,
       body: Stack(
         children: [
           PositionedDirectional(
@@ -108,6 +111,15 @@ class AuthScaffold extends StatelessWidget {
                                       CrossAxisAlignment.stretch,
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
+                                    if (leading != null) ...[
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional.centerStart,
+                                        child: leading!,
+                                      ),
+                                      const SizedBox(height: AppSpacing.md),
+                                    ],
+
                                     if (title != null)
                                       Text(title!, style: text.headlineSmall),
                                     if (subtitle != null) ...[

@@ -67,6 +67,8 @@ class AppTheme {
           minimumSize: buttonSize,
           shape: buttonShape,
           textStyle: textTheme.labelLarge,
+          disabledBackgroundColor: c.line,
+          disabledForegroundColor: c.textMuted,
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
@@ -92,7 +94,7 @@ class AppTheme {
           horizontal: AppSpacing.lg,
           vertical: AppSpacing.lg,
         ),
-        hintStyle: textTheme.bodyLarge?.copyWith(color: c.textMuted),
+        hintStyle: textTheme.bodyLarge?.copyWith(color: c.textSubtle),
         border: border(c.line),
         enabledBorder: border(c.line),
         focusedBorder: border(c.primary),
